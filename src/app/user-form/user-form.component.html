@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1>Formulaire</h1>
+    <form action="">
+      <label for="nom"> Nom</label>
+      <input [(ngModel)]="nom" type="text" id="nom" name="nom" placeholder="" class="form-control">
+
+      <label for="prenom"> Prenom</label>
+      <input [(ngModel)]="prenom" type="text" id="prenom" name="prenom" placeholder="" class="form-control">
+
+      <label for="email">Email</label>
+      <input [(ngModel)]="email" type="email" id="email" name="email" placeholder="" class="form-control">
+
+      <p>{{nom}}</p>
+      <p> {{prenom}}</p>
+      <p>{{email}}</p>
+
+      <button (click)="addUser()"> Ajouter</button>
+    </form>
+  </div>
+  <ul>
+    <li *ngFor="let user of users">
+      {{user.nom}}
+      {{user.prenom}}
+      {{user.email}}
+    </li>
+  </ul>
+
+</div>
